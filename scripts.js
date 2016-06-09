@@ -29,10 +29,12 @@ $(document).ready(function(){
 				
 				//console.log(data);
 
-				var codeHTML = '<tr class="' + statusRow +  '">';
+				var codeHTML = '<tr class="' + (statusRow != 'undefined' ? statusRow : 'table-warning') +  '">';
 
 				codeHTML += '<td>' ;
+				codeHTML += '<a href="https://www.twitch.tv/' + userName + '">';
 				codeHTML += data.display_name;
+				codeHTML += '</a>';
 				codeHTML += '</td>';
 
 				codeHTML += '<td>' ;
